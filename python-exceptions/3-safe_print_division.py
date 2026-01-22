@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-def print_reversed_list_integer(my_list=[]):
-    """Print all integers of a list, in reverse order, one per line."""
-    for i in my_list[::-1]:
-        print("{:d}".format(i))
+def safe_print_division(a, b):
+    """Divide 2 integers and print the result inside finally section."""
+    result = None
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = None
+    finally:
+        print("Inside result: {}".format(result))
+    return result
