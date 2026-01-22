@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-
 a = 89
 b = 10
-
-# switch
 a, b = b, a
-
-print("a =", a)
-print("b =", b)
+print("a={:d} - b={:d}".format(a, b))
