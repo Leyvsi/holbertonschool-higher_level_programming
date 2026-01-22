@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-square_matrix_simple = __import__('0-square_matrix_simple').square_matrix_simple
+print_list_integer = __import__('0-print_list_integer').print_list_integer
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-new_matrix = square_matrix_simple(matrix)
-print(new_matrix)
-print(matrix)
+my_list = [1, 2, 3, 4, 5]
+print_list_integer(my_list)
