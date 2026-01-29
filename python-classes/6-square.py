@@ -23,7 +23,7 @@ class Square:
     @size.setter
     def size(self, value):
         """Set the size of the square with validation."""
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -37,9 +37,9 @@ class Square:
     @position.setter
     def position(self, value):
         """Set the position of the square with validation."""
-        if (type(value) != tuple or len(value) != 2 or
-            type(value[0]) != int or type(value[1]) != int or
-            value[0] < 0 or value[1] < 0):
+        if (not isinstance(value, tuple) or len(value) != 2 or
+            not isinstance(value[0], type(value[1])) != int or
+                value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -50,7 +50,7 @@ class Square:
     def my_print(self):
         """Print the square using '#' character with position offsets.
 
-        Prints an empty line if size is 0. 
+        Prints an empty line if size is 0.
         Position[0] = spaces before each line.
         Position[1] = number of new lines before the square.
         """
@@ -63,4 +63,3 @@ class Square:
         # Print each line of the square
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
-
