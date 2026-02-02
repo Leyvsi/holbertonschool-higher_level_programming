@@ -58,4 +58,15 @@ class Rectangle:
 
         symbol = str(self.print_symbol)
         rectangle = []
-        for _ in range(sel_
+        for _ in range(self.__height):
+            rectangle.append(symbol * self.__width)
+        return "\n".join(rectangle)
+
+    def __repr__(self):
+        """Return a string representation to recreate the instance"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Print a message when a Rectangle instance is deleted"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
