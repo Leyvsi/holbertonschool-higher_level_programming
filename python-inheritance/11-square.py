@@ -21,10 +21,10 @@ class Square(Rectangle):
         """
         # Validate size using the inherited integer_validator
         self.integer_validator("size", size)
-        
+
         # Initialize the parent class (Rectangle)
         super().__init__(size, size)
-        
+
         # Store size as a private attribute
         self.__size = size
 
