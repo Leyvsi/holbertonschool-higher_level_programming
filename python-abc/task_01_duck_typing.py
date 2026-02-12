@@ -35,19 +35,22 @@ class Circle(Shape):
         """
         Initialize the circle with a radius.
         """
+        # We store the radius as is
         self.radius = radius
 
     def area(self):
         """
-        Calculate area: pi * r^2
+        Calculate area: pi * |r|^2
         """
-        return math.pi * (self.radius ** 2)
+        # Using abs() ensures a positive radius for the calculation
+        return math.pi * (abs(self.radius) ** 2)
 
     def perimeter(self):
         """
-        Calculate perimeter: 2 * pi * r
+        Calculate perimeter: 2 * pi * |r|
         """
-        return 2 * math.pi * self.radius
+        # Using abs() ensures a positive perimeter
+        return 2 * math.pi * abs(self.radius)
 
 
 class Rectangle(Shape):
@@ -64,22 +67,20 @@ class Rectangle(Shape):
 
     def area(self):
         """
-        Calculate area: width * height
+        Calculate area: |width| * |height|
         """
-        return self.width * self.height
+        return abs(self.width) * abs(self.height)
 
     def perimeter(self):
         """
-        Calculate perimeter: 2 * (width + height)
+        Calculate perimeter: 2 * (|width| + |height|)
         """
-        return 2 * (self.width + self.height)
+        return 2 * (abs(self.width) + abs(self.height))
 
 
 def shape_info(shape):
     """
     Prints area and perimeter of any object that behaves like a Shape.
-    This is an example of Duck Typing.
     """
-    # We call the methods without checking the object type
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
