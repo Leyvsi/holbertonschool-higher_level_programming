@@ -1,34 +1,24 @@
-# SQL - Introduction
+SQL Introduction
+This project is an introduction to Relational Databases and MySQL 8.0. It covers the basics of database management, from exploring the server to manipulating data.
 
-This project is an introduction to **SQL (Structured Query Language)** and **MySQL 8.0**. The goal is to understand how to manage relational databases, create tables, and manipulate data using DDL (Data Definition Language) and DML (Data Manipulation Language).
+Project Summary
+The goal of this project is to learn how to:
 
-## Learning Objectives
+Understand the difference between DDL (Data Definition Language) and DML (Data Manipulation Language).
 
-By the end of this project, I will be able to explain:
-* What a relational database is.
-* What SQL stands for and its basic syntax.
-* How to create, modify, and delete databases and tables.
-* How to perform CRUD operations (Create, Read, Update, Delete).
-* The difference between DDL and DML.
+Create and manage databases.
 
-## Requirements
+Define tables and manage their schemas (CREATE, ALTER).
 
-* **Environment:** Ubuntu 22.04 LTS
-* **Database Version:** MySQL 8.0 (8.0.25)
-* **Style:** * All SQL keywords are in **UPPERCASE**.
-    * Every script starts with a comment describing the task.
-    * Every query is preceded by a short comment.
-    * Files end with a new line.
+Perform CRUD operations (INSERT, SELECT, UPDATE, DELETE).
 
-## Tasks
+Use SQL functions and subqueries.
 
-| File | Description |
-| --- | --- |
-| `0-list_databases.sql` | Lists all databases of the MySQL server. |
+Requirements
+OS: Ubuntu 22.04 LTS
 
-## Usage
+Database: MySQL 8.0 (v8.0.25)
 
-To execute the scripts, use the following command structure:
+Editor: vi, vim, or emacs
 
-```bash
-cat <file_name>.sql | mysql -hlocalhost -uroot -p
+Style: SQL keywords must be in UPPERCASE.
