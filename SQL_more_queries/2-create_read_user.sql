@@ -1,6 +1,6 @@
--- Creates the database hbtn_0d_2 and user_0d_2 in the MySQL server
+-- Create the dB hbtn_0d_2 if it does not exist
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
+-- Create the user user_0d_2 if it does not exist
 CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
-
--- Grant all privileges on your MySQL server to user_0d_2
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_'@'localhost' WITH GRANT OPTION;
+-- Grant only SELECT privilege on the hbtn_0d_2 db to user_0d_2
+GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
