@@ -1,0 +1,50 @@
+============================
+Tests for 7-base_geometry.py
+============================
+
+Importation de la classe :
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+1. Test de la méthode area() (doit lever une Exception) :
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+2. Test de integer_validator avec des valeurs valides :
+    >>> bg.integer_validator("size", 10)
+    >>> bg.integer_validator("width", 1)
+
+3. Test de integer_validator avec des types non-entiers (TypeError) :
+    >>> bg.integer_validator("age", "20")
+    Traceback (most recent call last):
+        ...
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("list", [1, 2, 3])
+    Traceback (most recent call last):
+        ...
+    TypeError: list must be an integer
+
+    >>> bg.integer_validator("none", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: none must be an integer
+
+4. Test de integer_validator avec des valeurs <= 0 (ValueError) :
+    >>> bg.integer_validator("distance", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: distance must be greater than 0
+
+    >>> bg.integer_validator("negative", -5)
+    Traceback (most recent call last):
+        ...
+    ValueError: negative must be greater than 0
+
+5. Test avec argument manquant (compatibilité versions Python) :
+    >>> bg.integer_validator("only_name")
+    Traceback (most recent call last):
+        ...
+    TypeError: ...integer_validator() missing 1 required positional argument: 'value'
