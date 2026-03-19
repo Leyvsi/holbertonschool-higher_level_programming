@@ -10,6 +10,5 @@ if (isNaN(arg)) {
       line += 'X';
     }
     console.log(line);
-   }
   }
-  
+}
